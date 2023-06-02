@@ -1,0 +1,81 @@
+services:
+  webportal:
+    container_name: webportal
+    image: ddjnw1yu/12laboursapp:latest
+    environment:
+      PORTAL_URL: ${PORTAL_URL}
+      QUERY_API_URL: ${QUERY_API_URL}
+      LOGIN_API_URL: ${LOGIN_API_URL}
+      LOGIN_API_KEY: ${LOGIN_API_KEY}
+      LOGIN_SECRET_KEY: ${LOGIN_SECRET_KEY}
+      GRAPHCMS_ENDPOINT: ${GRAPHCMS_ENDPOINT}
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
+      TWELVE_LABOURS_XML: ${TWELVE_LABOURS_XML}
+      GOOGLE_ANALYTICS_GA4: ${GOOGLE_ANALYTICS_GA4}
+      FLATMAP_API: ${FLATMAP_API}
+    ports:
+      - "3000:3000"
+
+  queryserver:
+    container_name: queryserver
+    image: ddjnw1yu/12laboursapi:latest
+    environment:
+      GEN3_ENDPOINT_URL: ${GEN3_ENDPOINT_URL}
+      GEN3_API_KEY: ${GEN3_API_KEY}
+      GEN3_KEY_ID: ${GEN3_KEY_ID}
+      IRODS_ENDPOINT_URL: ${IRODS_ENDPOINT_URL}
+      IRODS_HOST: ${IRODS_HOST}
+      IRODS_PORT: ${IRODS_PORT}
+      IRODS_USER: ${IRODS_USER}
+      IRODS_PASSWORD: ${IRODS_PASSWORD}
+      IRODS_ZONE: ${IRODS_ZONE}
+    ports:
+      - "8000:8000"
+
+  loginsystem:
+    container_name: loginsystem
+    image: ddjnw1yu/12laboursnodejsapi:latest
+    environment:
+      LOGIN_API_PORT: ${LOGIN_API_PORT}
+      LOGIN_API_KEY: ${LOGIN_API_KEY}
+      LOGIN_SECRET_KEY: ${LOGIN_SECRET_KEY}
+      PASSWORD_RESET_URL: ${PASSWORD_RESET_URL}
+      USER_VERIFY_URL: ${USER_VERIFY_URL}
+      GOOGLE_REDIRECT_URI: ${GOOGLE_REDIRECT_URI}
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: ${DB_NAME}
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
+      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET}
+      SENDGRID_API_KEY: ${SENDGRID_API_KEY}
+      SENDGRID_VERIFIED_SENDER: ${SENDGRID_VERIFIED_SENDER}
+    ports:
+      - "${LOGIN_API_PORT}:${LOGIN_API_PORT}"
+
+  pgadmin4:
+    container_name: pgadmin4
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    volumes:
+      - data:/var/lib/pgadmin
+
+  postgresdb:
+    container_name: postgresdb
+    image: ddjnw1yu/12labourspostgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    volumes:
+      - data:/var/lib/postgresql/data
+
+volumes:
+  data:
