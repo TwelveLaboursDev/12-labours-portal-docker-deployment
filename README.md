@@ -1,6 +1,8 @@
 # 12 Labours Portal Docker Deployment
 
 ## Docker Image
+Click image name to see more information for docker images.
+
 `Web Portal` - [ddjnw1yu/12laboursapp:latest](https://hub.docker.com/r/ddjnw1yu/12laboursapp)
 
 `Query Server` - [ddjnw1yu/12laboursapi:latest](https://hub.docker.com/r/ddjnw1yu/12laboursapi)
@@ -61,7 +63,8 @@ SENDGRID_VERIFIED_SENDER =
 ```
 
 ## Start the docker-compose file
-Use following command to start all docker images.
+Clone the repo and follow above steps to create env file.
+Use following command in the Terminal to start all docker images.
 ```bash
 $ docker compose up
 ```
