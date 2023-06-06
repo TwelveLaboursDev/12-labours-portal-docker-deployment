@@ -64,7 +64,8 @@ SENDGRID_VERIFIED_SENDER =
 
 ## Start the docker-compose file
 Clone the repo and follow above steps to create env file.
-Use following command in the Terminal to start all docker images.
+
+Use following command in the `Terminal` to start all docker images.
 ```bash
 $ docker compose up
 ```
