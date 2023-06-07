@@ -7,7 +7,7 @@ Click image name to see more information for docker images.
 
 `Query Server` - [ddjnw1yu/12laboursapi:latest](https://hub.docker.com/r/ddjnw1yu/12laboursapi)
 
-`Login System`- -[ddjnw1yu/12laboursnodejsapi:latest](https://hub.docker.com/r/ddjnw1yu/12laboursnodejsapi)
+`Login System`- [ddjnw1yu/12laboursnodejsapi:latest](https://hub.docker.com/r/ddjnw1yu/12laboursnodejsapi)
 
 `pgAdmin4` - [dpage/pgadmin4](https://hub.docker.com/r/dpage/pgadmin4)
 
@@ -50,6 +50,7 @@ GOOGLE_REDIRECT_URI = "http://localhost:3000/login/callback"
 PASSWORD_RESET_URL = "http://localhost:3000/password-reset"
 
 # db_user and db_name better to be the same, will easier to setup web version pgadmin4
+# here is an example of db information
 DB_HOST = "postgresdb"
 DB_PORT = "5432"
 DB_USER = "12labours"
@@ -86,4 +87,4 @@ Or right click the *`docker-compose.yml`* file, choose **`Compose Up (- Select S
     - Host: `Container IPAddress` (Run `docker ps` in terminal, then run `docker inspect <postgres container id>`, you will find **`IPAddress`**)
     - Username: `DB_NAME`
     - Password: `DB_PASSWORD`
-6. Now you can find all user data through Databases > 12labours > Schemas > public > Tables or use sql to query data.
+6. Now you can find all user data through `Databases` > `12labours` > `Schemas` > `public` > `Tables` or use sql to query data.
