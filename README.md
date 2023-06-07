@@ -7,7 +7,7 @@ Click image name to see more information for docker images.
 
 `Query Server` - [ddjnw1yu/12laboursapi:latest](https://hub.docker.com/r/ddjnw1yu/12laboursapi)
 
-`Login System`- -[ddjnw1yu/12laboursnodejsapi:latest](https://hub.docker.com/r/ddjnw1yu/12laboursnodejsapi)
+`Login System`- [ddjnw1yu/12laboursnodejsapi:latest](https://hub.docker.com/r/ddjnw1yu/12laboursnodejsapi)
 
 `pgAdmin4` - [dpage/pgadmin4](https://hub.docker.com/r/dpage/pgadmin4)
 
@@ -78,7 +78,7 @@ Or right click the *`docker-compose.yml`* file, choose **`Compose Up (- Select S
 
 
 ## Setup pgAdmin4 web version
-1. Point your browser to [http://localhost:5050](http://localhost:5050).
+1. Point your browser to [http://localhost:5050](http://localhost:5050)
 2. Login with the email and account you used in `PGADMIN_DEFAULT_EMAIL` and `PGADMIN_DEFAULT_PASSWORD`.
 3. Once logged in, click **`Add New Server`** under Quick Links.
 4. Fill the server name.
