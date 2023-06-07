@@ -1,6 +1,6 @@
 # 12 Labours Portal Docker Deployment
 
-## Docker Image
+## Docker image
 Click image name to see more information for docker images.
 
 `Web Portal` - [ddjnw1yu/12laboursapp:latest](https://hub.docker.com/r/ddjnw1yu/12laboursapp)
@@ -60,6 +60,10 @@ GOOGLE_CLIENT_ID =
 GOOGLE_CLIENT_SECRET =
 SENDGRID_API_KEY =
 SENDGRID_VERIFIED_SENDER =
+
+# use your own admin email and password
+PGADMIN_DEFAULT_EMAIL =
+PGADMIN_DEFAULT_PASSWORD =
 ```
 
 ## Start the docker-compose file
@@ -70,3 +74,16 @@ Use following command in the `Terminal` to start all docker images.
 $ docker compose up
 ```
 Or right click the *`docker-compose.yml`* file, choose **`Compose Up (- Select Services)`** command to start docker images.
+
+
+## Setup pgAdmin4 web version
+1. Point your browser to [http://localhost:5050](http://localhost:5050).
+2. Login with the email and account you used in `PGADMIN_DEFAULT_EMAIL` and `PGADMIN_DEFAULT_PASSWORD`.
+3. Once logged in, click **`Add New Server`** under Quick Links.
+4. Fill the server name.
+5. Go to Connection:
+
+    - Host: `Container IPAddress` (Run `docker ps` in terminal, then run `docker inspect <postgres container id>`, you will find **`IPAddress`**)
+    - Username: `DB_NAME`
+    - Password: `DB_PASSWORD`
+6. Now you can find all user data through Databases > 12labours > Schemas > public > Tables or use sql to query data.
