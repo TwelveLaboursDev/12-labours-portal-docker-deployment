@@ -53,9 +53,9 @@ PASSWORD_RESET_URL = "http://localhost:3000/password-reset"
 # here is an example of db information
 DB_HOST = "postgresdb"
 DB_PORT = "5432"
-DB_USER = "12labours"
-DB_PASSWORD = "1212"
-DB_NAME = "12labours"
+DB_USER =
+DB_PASSWORD =
+DB_NAME =
 
 GOOGLE_CLIENT_ID =
 GOOGLE_CLIENT_SECRET =
