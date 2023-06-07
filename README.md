@@ -21,8 +21,8 @@ QUERY_API_URL = "http://localhost:8000"
 LOGIN_API_URL = "http://localhost:8080"
 
 # api_key and secret_key should be set to complex strings
-LOGIN_API_KEY = "ThisIsTheAPIKey"
-LOGIN_SECRET_KEY = "ThisIsTheSecretKey"
+LOGIN_API_KEY =
+LOGIN_SECRET_KEY =
 
 GRAPHCMS_ENDPOINT =
 GOOGLE_CLIENT_ID =
@@ -53,9 +53,9 @@ PASSWORD_RESET_URL = "http://localhost:3000/password-reset"
 # here is an example of db information
 DB_HOST = "postgresdb"
 DB_PORT = "5432"
-DB_USER = "12labours"
-DB_PASSWORD = "1212"
-DB_NAME = "12labours"
+DB_USER =
+DB_PASSWORD =
+DB_NAME =
 
 GOOGLE_CLIENT_ID =
 GOOGLE_CLIENT_SECRET =
