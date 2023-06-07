@@ -21,8 +21,8 @@ QUERY_API_URL = "http://localhost:8000"
 LOGIN_API_URL = "http://localhost:8080"
 
 # api_key and secret_key should be set to complex strings
-LOGIN_API_KEY = "ThisIsTheAPIKey"
-LOGIN_SECRET_KEY = "ThisIsTheSecretKey"
+LOGIN_API_KEY =
+LOGIN_SECRET_KEY =
 
 GRAPHCMS_ENDPOINT =
 GOOGLE_CLIENT_ID =
