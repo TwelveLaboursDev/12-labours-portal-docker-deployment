@@ -13,6 +13,8 @@ Click image name to see more information for docker images.
 
 `PostgresDB` - [ddjnw1yu/12labourspostgres:latest](https://hub.docker.com/r/ddjnw1yu/12labourspostgres)
 
+You can also create your own docker image by forking 12 labours portal related repositories. To find out related repositories, please check [Auckland Bioengineering Institute Software](https://github.com/ABI-Software) GitHub.
+
 ## Environment variables
 Create a *`.env`* file, copy and paste with following environment variables.
 ```bash
