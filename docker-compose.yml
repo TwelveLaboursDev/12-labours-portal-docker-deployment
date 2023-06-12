@@ -1,7 +1,7 @@
 services:
   webportal:
     container_name: webportal
-    image: ddjnw1yu/12laboursapp:latest
+    image: 12labours/webportal:latest
     environment:
       PORTAL_URL: ${PORTAL_URL}
       QUERY_API_URL: ${QUERY_API_URL}
@@ -18,7 +18,7 @@ services:
 
   queryserver:
     container_name: queryserver
-    image: ddjnw1yu/12laboursapi:latest
+    image: 12labours/queryserver:latest
     environment:
       GEN3_ENDPOINT_URL: ${GEN3_ENDPOINT_URL}
       GEN3_API_KEY: ${GEN3_API_KEY}
@@ -34,7 +34,7 @@ services:
 
   loginsystem:
     container_name: loginsystem
-    image: ddjnw1yu/12laboursnodejsapi:latest
+    image: 12labours/loginsystem:latest
     environment:
       LOGIN_API_PORT: ${LOGIN_API_PORT}
       LOGIN_API_KEY: ${LOGIN_API_KEY}
@@ -68,7 +68,7 @@ services:
 
   postgresdb:
     container_name: postgresdb
-    image: ddjnw1yu/12labourspostgres:latest
+    image: 12labours/logindatabase:latest
     restart: always
     environment:
       POSTGRES_USER: ${DB_USER}
