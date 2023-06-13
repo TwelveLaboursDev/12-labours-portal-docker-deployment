@@ -3,15 +3,15 @@
 ## Docker image
 Click image name to see more information for docker images.
 
-`Web Portal` - [12labours/webportal:latest](https://hub.docker.com/r/12labours/webportal)
+`Web Portal` - [12labours/app:latest](https://hub.docker.com/r/12labours/app)
 
-`Query Server` - [12labours/queryserver:latest](https://hub.docker.com/r/12labours/queryserver)
+`Query Server` - [12labours/api:latest](https://hub.docker.com/r/12labours/api)
 
-`Login System`- [12labours/loginsystem:latest](https://hub.docker.com/r/12labours/loginsystem)
+`Login System`- [12labours/nodejsapi:latest](https://hub.docker.com/r/12labours/nodejsapi)
 
 `pgAdmin4` - [dpage/pgadmin4](https://hub.docker.com/r/dpage/pgadmin4)
 
-`PostgresDB` - [12labours/logindatabase:latest](https://hub.docker.com/r/12labours/logindatabase)
+`PostgresDB` - [12labours/postgres:latest](https://hub.docker.com/r/12labours/postgres)
 
 You can also create your own docker image by forking 12 labours portal related repositories. To find out related repositories, please check [Auckland Bioengineering Institute Software](https://github.com/ABI-Software) GitHub.
 
