@@ -80,7 +80,7 @@ Or right click the *`docker-compose.yml`* file, choose **`Compose Up (- Select S
 
 
 ## Setup pgAdmin4 web version
-1. Point your browser to [http://localhost:5050](http://localhost:5050).
+1. Point your browser to [http://localhost:5050](http://localhost:5050)
 2. Login with the email and account you used in `PGADMIN_DEFAULT_EMAIL` and `PGADMIN_DEFAULT_PASSWORD`.
 3. Once logged in, click **`Add New Server`** under Quick Links.
 4. Fill the server name.
