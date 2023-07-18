@@ -90,3 +90,13 @@ Or right click the *`docker-compose.yml`* file, choose **`Compose Up (- Select S
     - Username: `DB_NAME`
     - Password: `DB_PASSWORD`
 6. Now you can find all user data through `Databases` > `12labours` > `Schemas` > `public` > `Tables` or use sql to query data.
+
+
+## Setting update when pgAdmin4 container restarted
+If you restart the pgAdmin4 docker container, you cannot open the pgAdmin4 web version directly. When you enter the password, you will get a `connection timeout expired` error. This is because the container IPAddress is changed every time it restarted. Please follow the steps to fix the setting:
+1. Right click you database server name.
+2. Choose `Properties`.
+3. Go to `Connection`.
+4. Repeat `Step 5 - Host` in `Setup pgAdmin4 web version` to get current `IPAddress`.
+5. Replace the IPAddress.
+6. Now you should be able to access your database through pgAdmin4 web again.
