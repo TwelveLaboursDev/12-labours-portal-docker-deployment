@@ -33,9 +33,12 @@ TWELVE_LABOURS_XML =
 FLATMAP_API =
 
 
+JWT_SECURE_KEY =
+
 GEN3_ENDPOINT_URL = "https://gen3.abi-ctt-ctp.cloud.edu.au"
 GEN3_API_KEY =
 GEN3_KEY_ID =
+GEN3_PUBLIC_ACCESS =
 
 IRODS_ENDPOINT_URL = "/tempZone/home/rods/12L/datasets"
 IRODS_HOST = "130.216.216.128"

@@ -20,9 +20,11 @@ services:
     container_name: queryserver
     image: 12labours/api-dev:latest
     environment:
+      JWT_SECURE_KEY: ${JWT_SECURE_KEY}
       GEN3_ENDPOINT_URL: ${GEN3_ENDPOINT_URL}
       GEN3_API_KEY: ${GEN3_API_KEY}
       GEN3_KEY_ID: ${GEN3_KEY_ID}
+      GEN3_PUBLIC_ACCESS: ${GEN3_PUBLIC_ACCESS}
       IRODS_ENDPOINT_URL: ${IRODS_ENDPOINT_URL}
       IRODS_HOST: ${IRODS_HOST}
       IRODS_PORT: ${IRODS_PORT}
