@@ -17,69 +17,70 @@ You can also create your own docker image by forking 12 labours portal related r
 
 ## Environment variables
 Create a *`.env`* file, copy and paste with following environment variables.
+(For Ubuntu, remove quote for all environment variables)
 ```bash
-PORTAL_URL = "http://localhost:3000"
-QUERY_API_URL = "http://localhost:8000"
-LOGIN_API_URL = "http://localhost:8080"
+PORTAL_URL="http://localhost:3000"
+QUERY_API_URL="http://localhost:8000"
+LOGIN_API_URL="http://localhost:8080"
 
 # api_key and secret_key should be set to complex strings
-LOGIN_API_KEY =
-LOGIN_SECRET_KEY =
+LOGIN_API_KEY=
+LOGIN_SECRET_KEY=
 
-GRAPHCMS_ENDPOINT =
-GOOGLE_CLIENT_ID =
-TWELVE_LABOURS_XML =
-// GOOGLE_ANALYTICS_GA4 =
-FLATMAP_API =
-
-
-JWT_SECURE_KEY =
-
-GEN3_ENDPOINT_URL = "https://gen3.abi-ctt-ctp.cloud.edu.au"
-GEN3_API_KEY =
-GEN3_KEY_ID =
-GEN3_PUBLIC_ACCESS =
-
-IRODS_ENDPOINT_URL = "/tempZone/home/rods/12L/datasets"
-IRODS_HOST = "130.216.216.128"
-IRODS_PORT = "1247"
-IRODS_USER =
-IRODS_PASSWORD =
-IRODS_ZONE = "tempZone"
+GRAPHCMS_ENDPOINT=
+GOOGLE_CLIENT_ID=
+TWELVE_LABOURS_XML=
+// GOOGLE_ANALYTICS_GA4=
+FLATMAP_API=
 
 
-LOGIN_API_PORT = "8080"
+JWT_SECURE_KEY=
 
-USER_VERIFY_URL = "http://localhost:3000/verify"
-GOOGLE_REDIRECT_URI = "http://localhost:3000/login/callback"
-PASSWORD_RESET_URL = "http://localhost:3000/password-reset"
+GEN3_ENDPOINT_URL="https://gen3.abi-ctt-ctp.cloud.edu.au"
+GEN3_API_KEY=
+GEN3_KEY_ID=
+GEN3_PUBLIC_ACCESS=
+
+IRODS_ENDPOINT_URL="/tempZone/home/rods/12L/datasets"
+IRODS_HOST="130.216.216.128"
+IRODS_PORT="1247"
+IRODS_USER=
+IRODS_PASSWORD=
+IRODS_ZONE="tempZone"
+
+
+LOGIN_API_PORT="8080"
+
+USER_VERIFY_URL="http://localhost:3000/verify"
+GOOGLE_REDIRECT_URI="http://localhost:3000/login/callback"
+PASSWORD_RESET_URL="http://localhost:3000/password-reset"
 
 # db_user and db_name better to be the same, will easier to setup web version pgadmin4
 # here is an example of db information
-DB_HOST = "postgresdb"
-DB_PORT = "5432"
-DB_USER =
-DB_PASSWORD =
-DB_NAME =
+DB_HOST="postgresdb"
+DB_PORT="5432"
+DB_USER=
+DB_PASSWORD=
+DB_NAME=
 
-GOOGLE_CLIENT_ID =
-GOOGLE_CLIENT_SECRET =
-SENDGRID_API_KEY =
-SENDGRID_VERIFIED_SENDER =
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+SENDGRID_API_KEY=
+SENDGRID_VERIFIED_SENDER=
 
 # use your own admin email and password
-PGADMIN_DEFAULT_EMAIL =
-PGADMIN_DEFAULT_PASSWORD =
+PGADMIN_DEFAULT_EMAIL=
+PGADMIN_DEFAULT_PASSWORD=
 ```
 
 ## Start the docker-compose file
 Clone the repo and follow above steps to create env file.
 
-Use following command in the `Terminal` to start all docker images.
+Use following command in the `Terminal` to start docker images.
 ```bash
-$ docker compose up
+$ docker compose up <services name (optional)>
 ```
-Or right click the *`docker-compose.yml`* file, choose **`Compose Up (- Select Services)`** command to start docker images.
+ If VSCode is used, install the Docker extension. Right click the *`docker-compose.yml`* file, choose **`Compose Up (- Select Services)`** command to start docker images.
 
 
 ## Setup pgAdmin4 web version

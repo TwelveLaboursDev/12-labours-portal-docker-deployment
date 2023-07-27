@@ -1,3 +1,5 @@
+version: "2"
+
 services:
   webportal:
     container_name: webportal
