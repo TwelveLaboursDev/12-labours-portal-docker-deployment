@@ -13,7 +13,7 @@ Click image name to see more information for docker images.
 
 `PostgresDB` - [12labours/postgres-dev:latest](https://hub.docker.com/r/12labours/postgres-dev)
 
-You can also create your own docker image by forking 12 labours portal related repositories. To find out related repositories, please check [Auckland Bioengineering Institute Software](https://github.com/ABI-Software) GitHub.
+You can also create your own docker image by forking 12 labours portal related repositories. To find out related repositories, please check [Auckland Bioengineering Institute Software](https://github.com/ABI-Software) or [TwelveLaboursDev](https://github.com/TwelveLaboursDev) GitHub.
 
 ## Environment variables
 Create a *`.env`* file, copy and paste with following environment variables.
@@ -23,7 +23,8 @@ PORTAL_URL="http://localhost:3000"
 QUERY_API_URL="http://localhost:8000"
 LOGIN_API_URL="http://localhost:8080"
 
-# api_key and secret_key should be set to complex strings
+# access_token, api_key and secret_key should be set to complex strings
+QUERY_ACCESS_TOKEN=
 LOGIN_API_KEY=
 LOGIN_SECRET_KEY=
 
@@ -35,7 +36,6 @@ FLATMAP_API=
 
 
 QUERY_SECURE_KEY=
-QUERY_ACCESS_TOKEN=
 
 GEN3_ENDPOINT_URL="https://gen3.abi-ctt-ctp.cloud.edu.au"
 GEN3_API_KEY=
